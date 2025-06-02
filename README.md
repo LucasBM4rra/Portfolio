@@ -24,7 +24,8 @@ Se preferir usar um servidor simples pelo terminal, siga um dos métodos abaixo:
 4. http://localhost:8000
 
 
-Importante
+Importante:
+
 Abrir diretamente o arquivo index.html clicando duas vezes pode causar falhas no carregamento do conteúdo dinâmico.
 
 Usar um servidor local garante que o AJAX funcione corretamente e o site seja exibido como esperado
