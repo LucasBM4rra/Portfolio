@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Lucas Borges Marra</title>
+  <link rel="stylesheet" href="css/contato.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="dark">
+
+  <div class="top-button-container">
+    <a href="index.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> Voltar à Página Inicial
+    </a>
+  </div>
+
+  <div class="container-contato">
+    <h1>Contato</h1>
+    <p class="descricao">Você pode entrar em contato comigo através dos links abaixo ou copiando meu e-mail diretamente:</p>
+
+    <div class="email-container">
+      <span id="email-text">lucasmarra63@gmail.com</span>
+      <button id="copy-button"><i class="fas fa-copy"></i> Copiar</button>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/lucas_borges1514/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/lucasborges1315" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/LucasBM4rra" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <script>
+    const copyButton = document.getElementById('copy-button');
+    const emailText = document.getElementById('email-text');
+
+    copyButton.addEventListener('click', () => {
+      navigator.clipboard.writeText(emailText.textContent).then(() => {
+        copyButton.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+        setTimeout(() => {
+          copyButton.innerHTML = '<i class="fas fa-copy"></i> Copiar';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
